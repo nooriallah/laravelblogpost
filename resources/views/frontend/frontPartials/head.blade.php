@@ -8,9 +8,13 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
     <title>Blog Post</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="Blog posts">
+    <meta name="description" content="this is a simple blog post system">
+    <meta name="author" content="Nooriallah Qayoumi">
+
+    {{-- Icon --}}
+    <link rel="shortcut icon" href="{{ asset("admin/settingimages/$setting->icon") }}" type="image/x-icon">
+
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="/frontend/css/bootstrap.min.css">
     <!-- style css -->

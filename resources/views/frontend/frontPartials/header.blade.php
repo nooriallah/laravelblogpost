@@ -12,7 +12,7 @@
                         <a class="nav-link" href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
@@ -28,18 +28,23 @@
         </nav>
     </div>
     <div class="container-fluid">
-        <div class="logo d-flex justify-content-center align-items-center"><a href="{{ route('home') }}"><img src="/frontend/images/logo.png"></a></div>
+        <div class="logo d-flex justify-content-center align-items-center">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset("admin/settingimages/$setting->logo") }}" width="150">
+            </a>
+        </div>
         <div class="menu_main">
             <ul>
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="{{ route('frontabout') }}">About</a></li>
+                <li><a href="{{ route('frontservices') }}">Services</a></li>
+                <li><a href="{{ route('frontblogs') }}">Blog</a></li>
+                <li><a href="{{ route('frontcontact') }}">Contact</a></li>
                 <li>
                     @if (Route::has('login'))
                         @auth
-                        
-                            <x-app-layout>                                  
+
+                            <x-app-layout>
                             </x-app-layout>
                         @else
                             <a href="{{ route('login') }}">Login</a> /

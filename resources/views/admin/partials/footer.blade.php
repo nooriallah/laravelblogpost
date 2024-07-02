@@ -1,9 +1,7 @@
 <footer class="footer">
     <div class="footer__block block no-margin-bottom">
         <div class="container-fluid text-center">
-            <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-            <p class="no-margin-bottom">2024 &copy;Nooriallah. Front template download from <a target="_blank"
-                    href="https://templateshub.net">Templates Hub</a>.</p>
+            <p class="no-margin-bottom">2024 &copy;Nooriallah. Front template download from </p>
         </div>
     </div>
 </footer>
@@ -16,5 +14,3 @@
 <script src="/admin/vendor/jquery-validation/jquery.validate.min.js"></script>
 <script src="/admin/js/charts-home.js"></script>
 <script src="/admin/js/front.js"></script>
-{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
-

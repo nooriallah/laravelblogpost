@@ -30,6 +30,12 @@ use App\Http\Controllers\PostController;
 
 Route::get('/home', [HomeController::class, "index"])->name("home")->middleware('auth');
 Route::get('/',[HomeController::class,'homepage'])->name('homepage');
+Route::get('/home/about',[HomeController::class,'about'])->name('frontabout');
+
+Route::get('/home/services',[HomeController::class,'services'])->name('frontservices');
+Route::get('/home/blogs',[HomeController::class,'blogs'])->name('frontblogs');
+Route::get('/home/contact',[HomeController::class,'contact'])->name('frontcontact');
+
 Route::get('/singlepost/{id}', [HomeController::class, 'show'])->name('singlepostpage');
 
 
@@ -47,6 +53,12 @@ Route::get('/post/restore/{id}', [PostController::class, 'restore'])->name('rest
 Route::get("/post/edit/{id}", [PostController::class, 'edit'])->name('edit');
 Route::post("/post/update/{id}", [PostController::class, 'update'])->name('update');
 
+Route::get("/dashboard/about", [AdminController::class, 'about'])->name('about');
+Route::post("/dashboard/updateabout/{id}", [AdminController::class, 'updateAbout'])->name('updateabout');
+
+Route::get("/dashboard/charts/", [AdminController::class, 'charts'])->name('charts');
+Route::get("/dashboard/settings/", [AdminController::class, 'setting'])->name('setting');
+Route::post("/dashboard/settings/", [AdminController::class, 'updateSetting'])->name('updatesetting');
 
 // End of custom routes
 
