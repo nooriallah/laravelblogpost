@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,8 +58,16 @@ Route::get("/dashboard/about", [AdminController::class, 'about'])->name('about')
 Route::post("/dashboard/updateabout/{id}", [AdminController::class, 'updateAbout'])->name('updateabout');
 
 Route::get("/dashboard/charts/", [AdminController::class, 'charts'])->name('charts');
+
 Route::get("/dashboard/settings/", [AdminController::class, 'setting'])->name('setting');
 Route::post("/dashboard/settings/", [AdminController::class, 'updateSetting'])->name('updatesetting');
+
+Route::get("/dashboard/testimonials/", [TestimonialController::class, 'index'])->name('showtesti');
+Route::get("/dashboard/testimonials/create/", [TestimonialController::class, 'create'])->name('createtesti');
+Route::post("/dashboard/testimonials/store/", [TestimonialController::class, 'store'])->name('storetesti');
+Route::get("/dashboard/testimonials/edit/{id}", [TestimonialController::class, 'edit'])->name('edittesti');
+Route::post("/dashboard/testimonials/update/{id}", [TestimonialController::class, 'update'])->name('updatetesti');
+Route::get("/dashboard/testimonials/delete/{id}", [TestimonialController::class, 'destroy'])->name('deletetesti');
 
 // End of custom routes
 

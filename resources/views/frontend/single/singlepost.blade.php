@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 {{-- Head  --}}
-@include('frontend.home.head')
+@include('frontend.frontPartials.head')
 
 <body>
     <!-- header section start -->
     <div class="header_section">
 
         {{-- main header  --}}
-        @include('frontend.home.header')
+        @include('frontend.frontPartials.header')
 
     </div>
     <!-- header section end -->
@@ -34,7 +34,7 @@
 
 
     {{-- Footer --}}
-    @include('frontend.home.footer')
+    @include('frontend.frontPartials.footer')
 
 </body>
 

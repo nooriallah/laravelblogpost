@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Post;
 use App\Models\Setting;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -57,6 +58,8 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Successfuly updated');
     }
+
+
 
     /**
      * Setting show.
