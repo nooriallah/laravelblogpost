@@ -22,7 +22,16 @@
 
         <li><a href="{{ route('about') }}"> <i class="fa fa-info-circle"></i>About Info </a></li>
 
-        <li><a href="#testis" aria-expanded="false" data-toggle="collapse">
+        <li><a href="#team" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-users"></i>Team </a>
+            <ul id="team" class="collapse list-unstyled ">
+                <li><a href="{{ route('team.index') }}"> <i class="fa fa-quote-left"></i>All team</a></li>
+                <li><a href="{{ route('team.create') }}"> <i class="fa fa-plus-square-o"></i>Add new</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#testis" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-list-alt"></i>Testimonials </a>
             <ul id="testis" class="collapse list-unstyled ">
                 <li><a href="{{ route('showtesti') }}"> <i class="fa fa-quote-left"></i>All testimonials</a></li>

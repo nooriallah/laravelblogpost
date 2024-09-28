@@ -2,13 +2,13 @@ let showAlert = (evt, title = 'Done', text = "Operation success", icon = 'succes
     // evt.preventDefault()
 
     Swal.fire({
-            position: "center",
-            icon: icon,
-            title: title,
-            text: text,
-            showConfirmButton: false,
-            timer: 1300
-        })
+        position: "center",
+        icon: icon,
+        title: title,
+        text: text,
+        showConfirmButton: false,
+        timer: 1300
+    })
         .then((result) => {
             window.location.href = evt.target.href;
         })
@@ -26,7 +26,12 @@ let showConfirm = (evt, title = "Are you sure?", text = "You won't be able to re
         confirmButtonText: "Yes"
     }).then((result) => {
         if (result.isConfirmed) {
-            showAlert(evt);
+            let form = evt.target.closest("form");
+            if (form) {
+                form.submit()
+            } else {
+                window.location.href = evt.target.href;
+            }
         }
     });
 }

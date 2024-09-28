@@ -123,6 +123,7 @@ class PostController extends Controller
     public function destroy(string $id)
     {
         $post = Post::find($id);
+        File::delete(public_path('postimages/' . $post->image));
         $post->delete();
 
         return redirect()->back()->with('message', 'Successfuly deleted');
